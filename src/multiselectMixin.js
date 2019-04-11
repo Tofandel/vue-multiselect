@@ -523,6 +523,7 @@ export default {
           if (key !== 'Tab') this.removeElement(option)
           return
         }
+        option = this.trackBy ? option[this.trackBy] : option
 
         this.$emit('select', option, this.id)
 
